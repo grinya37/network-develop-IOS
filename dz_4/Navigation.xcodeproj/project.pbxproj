@@ -20,7 +20,7 @@
 		20EB0ED92992D2FD00FE2A97 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EB0ED82992D2FD00FE2A97 /* ProfileHeaderView.swift */; };
 		20F0A2AE29A394A8001028C8 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F0A2AD29A394A8001028C8 /* CustomTextField.swift */; };
 		20F0A2B229A4C48F001028C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F0A2B129A4C48F001028C8 /* LogInViewController.swift */; };
-		20F0A2B429A4C4A7001028C8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F0A2B329A4C4A7001028C8 /* LoginView.swift */; };
+		20F0A2D829A5261F001028C8 /* CustomUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F0A2D729A5261F001028C8 /* CustomUIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		20EB0ED82992D2FD00FE2A97 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		20F0A2AD29A394A8001028C8 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		20F0A2B129A4C48F001028C8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		20F0A2B329A4C4A7001028C8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		20F0A2D729A5261F001028C8 /* CustomUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				20F0A2AD29A394A8001028C8 /* CustomTextField.swift */,
+				20F0A2D729A5261F001028C8 /* CustomUIColor.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -150,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				20F0A2B129A4C48F001028C8 /* LogInViewController.swift */,
-				20F0A2B329A4C4A7001028C8 /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -228,10 +228,10 @@
 				2035F583298876F10083D1B7 /* PostViewController.swift in Sources */,
 				20F0A2AE29A394A8001028C8 /* CustomTextField.swift in Sources */,
 				20F0A2B229A4C48F001028C8 /* LogInViewController.swift in Sources */,
+				20F0A2D829A5261F001028C8 /* CustomUIColor.swift in Sources */,
 				2035F581298854FD0083D1B7 /* UITabBarController.swift in Sources */,
 				2035F56929884F680083D1B7 /* AppDelegate.swift in Sources */,
 				2035F57F298853550083D1B7 /* ProfileViewController.swift in Sources */,
-				20F0A2B429A4C4A7001028C8 /* LoginView.swift in Sources */,
 				20EB0ED92992D2FD00FE2A97 /* ProfileHeaderView.swift in Sources */,
 				2035F57D2988533D0083D1B7 /* FeedViewController.swift in Sources */,
 				206CE700298932B9008AAFF5 /* Post.swift in Sources */,
