@@ -15,11 +15,12 @@
 		2035F57F298853550083D1B7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2035F57E298853550083D1B7 /* ProfileViewController.swift */; };
 		2035F581298854FD0083D1B7 /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2035F580298854FD0083D1B7 /* UITabBarController.swift */; };
 		2035F583298876F10083D1B7 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2035F582298876F10083D1B7 /* PostViewController.swift */; };
-		204FA091299AD16700123E0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204FA090299AD16700123E0E /* Constants.swift */; };
 		206CE700298932B9008AAFF5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206CE6FF298932B9008AAFF5 /* Post.swift */; };
 		206CE70229894580008AAFF5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206CE70129894580008AAFF5 /* InfoViewController.swift */; };
 		20EB0ED92992D2FD00FE2A97 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EB0ED82992D2FD00FE2A97 /* ProfileHeaderView.swift */; };
 		20F0A2AE29A394A8001028C8 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F0A2AD29A394A8001028C8 /* CustomTextField.swift */; };
+		20F0A2B229A4C48F001028C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F0A2B129A4C48F001028C8 /* LogInViewController.swift */; };
+		20F0A2B429A4C4A7001028C8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F0A2B329A4C4A7001028C8 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +34,12 @@
 		2035F57E298853550083D1B7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2035F580298854FD0083D1B7 /* UITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarController.swift; sourceTree = "<group>"; };
 		2035F582298876F10083D1B7 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		204FA090299AD16700123E0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		206CE6FF298932B9008AAFF5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		206CE70129894580008AAFF5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		20EB0ED82992D2FD00FE2A97 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		20F0A2AD29A394A8001028C8 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		20F0A2B129A4C48F001028C8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		20F0A2B329A4C4A7001028C8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,6 @@
 			children = (
 				204FA095299ADC7000123E0E /* Data */,
 				206CE6FE29893287008AAFF5 /* Post */,
-				204FA094299ADC4500123E0E /* Constants */,
 				204FA096299ADC9100123E0E /* UITabBarController */,
 				20EB0ED72992D2D600FE2A97 /* Profile */,
 				204FA099299ADCC400123E0E /* InfoViewController */,
@@ -82,14 +83,6 @@
 				2035F57629884F690083D1B7 /* Info.plist */,
 			);
 			path = Navigation;
-			sourceTree = "<group>";
-		};
-		204FA094299ADC4500123E0E /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				204FA090299AD16700123E0E /* Constants.swift */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		204FA095299ADC7000123E0E /* Data */ = {
@@ -105,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				2035F580298854FD0083D1B7 /* UITabBarController.swift */,
+				20F0A2B029A4C475001028C8 /* Login */,
 			);
 			path = UITabBarController;
 			sourceTree = "<group>";
@@ -150,6 +144,15 @@
 				20F0A2AD29A394A8001028C8 /* CustomTextField.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		20F0A2B029A4C475001028C8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				20F0A2B129A4C48F001028C8 /* LogInViewController.swift */,
+				20F0A2B329A4C4A7001028C8 /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,11 +227,12 @@
 			files = (
 				2035F583298876F10083D1B7 /* PostViewController.swift in Sources */,
 				20F0A2AE29A394A8001028C8 /* CustomTextField.swift in Sources */,
+				20F0A2B229A4C48F001028C8 /* LogInViewController.swift in Sources */,
 				2035F581298854FD0083D1B7 /* UITabBarController.swift in Sources */,
 				2035F56929884F680083D1B7 /* AppDelegate.swift in Sources */,
 				2035F57F298853550083D1B7 /* ProfileViewController.swift in Sources */,
+				20F0A2B429A4C4A7001028C8 /* LoginView.swift in Sources */,
 				20EB0ED92992D2FD00FE2A97 /* ProfileHeaderView.swift in Sources */,
-				204FA091299AD16700123E0E /* Constants.swift in Sources */,
 				2035F57D2988533D0083D1B7 /* FeedViewController.swift in Sources */,
 				206CE700298932B9008AAFF5 /* Post.swift in Sources */,
 				206CE70229894580008AAFF5 /* InfoViewController.swift in Sources */,
