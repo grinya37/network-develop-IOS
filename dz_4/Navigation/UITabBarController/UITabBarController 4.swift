@@ -9,8 +9,8 @@ import UIKit
 
 final class TabBarController: UITabBarController {
     
-    private let profileVC = ProfileViewController()
     private let feedVC = FeedViewController()
+    private let profileVC = ProfileViewController()
     private let postVC = PostViewController()
     private let loginVC = LogInViewController()
     
@@ -32,3 +32,4 @@ final class TabBarController: UITabBarController {
         viewControllers = [navigationController, loginController]
     }
 }
+

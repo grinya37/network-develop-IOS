@@ -5,16 +5,13 @@
 //  Created by Николай Гринько on 07.02.2023.
 //
 
+import Foundation
 import UIKit
 
 class ProfileHeaderView: UIView {
     
-    private let backgroundView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemGray4
-        return view
-    }()
+    private var statusText: String = ""
+    
     
     private let avatarImageView: UIImageView = {
         let imageView = UIImageView()
@@ -67,7 +64,6 @@ class ProfileHeaderView: UIView {
     }()
     
     private (set) lazy var setStatusButton: UIButton = {
-        
         let button = UIButton(type: .system)
         button.setTitle("Set status", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -77,69 +73,45 @@ class ProfileHeaderView: UIView {
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOpacity = 1
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(setStatusAction), for: .touchUpInside)
+        button.addTarget(self, action: #selector(avatarButtomAction), for: .touchUpInside)
         return button
     }()
     
-    
-    private var statusText: String?
-    private var key = "key"
-    
     override init(frame: CGRect) {
-        super.init(frame: .zero)
-        setupView()
-        setConstraints()
-        
-        self.statusLabel.text = loadFromStorage(by: "somekey")
+        super.init(frame: frame)
+        backgroundColor = .white
+        setupLayoutConstraints()
+        addTap()
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError()
     }
     
-    private func setupView() {
+    @objc private func avatarButtomAction(selector: UIButton) {
+        statusLabel.text = statusTextField.text
+    }
+    
+    private func addTap() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        addGestureRecognizer(tap)
+    }
+    
+    @objc private func hideKeyboard() {
+        endEditing(true)
+    }
+    
+    private func setupLayoutConstraints() {
         
-        backgroundColor = .systemGray2
+        backgroundColor = .systemGray4
+        addSubview(avatarImageView)
+        addSubview(setStatusButton)
+        addSubview(fullNamedLabel)
+        addSubview(statusLabel)
+        addSubview(statusTextField)
         
-        self.addSubview(avatarImageView)
-        self.addSubview(fullNamedLabel)
-        self.addSubview(statusLabel)
-        self.addSubview(setStatusButton)
-        self.addSubview(statusTextField)
-        
-        statusTextField.addTarget(self, action: #selector(statusTextChanged), for: .editingChanged)
-    }
-    
-    @objc
-    private func statusTextChanged(_ profileTextField: UITextField) {
-        if let text = profileTextField.text {
-            statusText = text
-        }
-    }
-    
-    @objc
-    private func setStatusAction() {
-        self.statusLabel.text = self.statusText
-        self.statusTextField.text = nil
-        self.saveToStorage(text: self.statusText ?? "", with: "somekey")
-    }
-}
-
-extension ProfileHeaderView {
-    
-    private func saveToStorage(text: String, with key: String) {
-        UserDefaults.standard.set(text, forKey: key)
-    }
-    
-    private func loadFromStorage(by key: String) -> String {
-        if let returnText = UserDefaults.standard.string(forKey: key) {
-            return returnText
-        }
-        return ""
-    }
-    
-    private func setConstraints() {
         NSLayoutConstraint.activate([
+            
             avatarImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 16),
             avatarImageView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             avatarImageView.widthAnchor.constraint(equalToConstant: 100),
@@ -158,22 +130,25 @@ extension ProfileHeaderView {
             statusTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             statusTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            setStatusButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             setStatusButton.heightAnchor.constraint(equalToConstant: 40),
             setStatusButton.topAnchor.constraint(equalTo: statusTextField.bottomAnchor, constant: 10),
             setStatusButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             setStatusButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            setStatusButton.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 35),
         ])
     }
 }
 
-
-
-
-
-
-
+extension ProfileHeaderView: UITextFieldDelegate {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let text = textField.text else { return }
+        setStatusButton.isEnabled = !text.isEmpty
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        endEditing(true)
+        return true
+    }
+}
 
 
 

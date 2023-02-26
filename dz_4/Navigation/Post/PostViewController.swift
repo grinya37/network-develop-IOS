@@ -13,7 +13,6 @@ class PostViewController: UIViewController {
     
     private var myPost: String?
     
-    
     init(myPost: String? = nil) {
         self.myPost = myPost
         super.init(nibName: nil, bundle: nil)
@@ -50,7 +49,6 @@ class PostViewController: UIViewController {
         infoVC.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(infoVC, animated: true)
     }
-    
 }
 
 
