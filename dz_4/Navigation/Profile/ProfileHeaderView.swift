@@ -12,7 +12,6 @@ class ProfileHeaderView: UIView {
     
     private var statusText: String = ""
     
-    
     private let avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Volf")
