@@ -4,8 +4,6 @@
 //
 //  Created by Николай Гринько on 07.02.2023.
 //
-
-import Foundation
 import UIKit
 
 class ProfileHeaderView: UIView {
@@ -102,7 +100,7 @@ class ProfileHeaderView: UIView {
     
     private func setupLayoutConstraints() {
         
-        backgroundColor = .systemGray4
+        backgroundColor = .white
         addSubview(avatarImageView)
         addSubview(setStatusButton)
         addSubview(fullNamedLabel)

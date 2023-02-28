@@ -8,9 +8,7 @@
 import Foundation
 import UIKit
 
-
 class CollectionViewCell: UICollectionViewCell {
-    
     
     //MARK: - Add Image View
     var colImageView: UIImageView = {
@@ -41,5 +39,4 @@ class CollectionViewCell: UICollectionViewCell {
             colImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
-    
 }

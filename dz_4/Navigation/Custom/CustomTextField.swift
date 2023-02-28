@@ -4,8 +4,6 @@
 //
 //  Created by Николай Гринько on 20.02.2023.
 //
-
-import Foundation
 import UIKit
 
 class TextFieldWithPadding: UITextField {
