@@ -5,10 +5,11 @@
 //  Created by Николай Гринько on 28.02.2023.
 //
 
-import Foundation
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+
+class PhotoCollectionViewCell: UICollectionViewCell {
+    
     
     //MARK: - Add Image View
     var colImageView: UIImageView = {
@@ -39,4 +40,5 @@ class CollectionViewCell: UICollectionViewCell {
             colImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
+    
 }
