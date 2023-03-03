@@ -4,11 +4,10 @@
 //
 //  Created by Николай Гринько on 28.02.2023.
 //
-
 import UIKit
 
 struct PhotoGallery {
-    
+
     static func setupGallery() -> [ImageGallery] {
         [
             .init(id: 1, imageName: "1"),
@@ -41,12 +40,10 @@ struct PhotoGallery {
             .init(id: 28, imageName: "28"),
             .init(id: 29, imageName: "29"),
             .init(id: 30, imageName: "30"),
-            .init(id: 31, imageName: "31"),
-            .init(id: 32, imageName: "32"),
-            .init(id: 33, imageName: "33")
+            
         ]
     }
-    
+
     static func randomPhotos(with count: Int) -> [ImageGallery] {
         return (0..<count).map { _ in setupGallery().randomElement()! }
     }

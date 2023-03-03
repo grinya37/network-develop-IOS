@@ -9,7 +9,7 @@ import UIKit
 
 final class PhotosViewController: UIViewController {
 
-    let photoGallery: [ImageGallery] = PhotoGallery.randomPhotos(with: 33)
+    let photoGallery: [ImageGallery] = PhotoGallery.randomPhotos(with: 30)
 
     //MARK: - Add Collection View
     private let collectionView: UICollectionView = {
